@@ -25,12 +25,10 @@ build:
   # https://skaffold.dev/docs/concepts/#image-repository-handling
   - image: emailservice
     context: src/emailservice
-    custom:
-      buildCommand: "./build.sh"
-      dependencies:
-        paths:
-          - Dockerfile
-          - src/emailservice
+    docker:
+      buildArgs:
+        http_proxy: http://globalproxy.gva.icrc.priv:8080
+        https_proxy: http://globalproxy.gva.icrc.priv:8080
   # - image: productcatalogservice
   #   context: src/productcatalogservice
   # - image: recommendationservice
