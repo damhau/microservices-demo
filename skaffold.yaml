@@ -25,33 +25,38 @@ build:
   # https://skaffold.dev/docs/concepts/#image-repository-handling
   - image: emailservice
     context: src/emailservice
-  - image: productcatalogservice
-    context: src/productcatalogservice
-  - image: recommendationservice
-    context: src/recommendationservice
-  - image: shoppingassistantservice
-    context: src/shoppingassistantservice
-  - image: shippingservice
-    context: src/shippingservice
-  - image: checkoutservice
-    context: src/checkoutservice
-  - image: paymentservice
-    context: src/paymentservice
-  - image: currencyservice
-    context: src/currencyservice
-  - image: cartservice
-    context: src/cartservice/src
-    docker:
-      dockerfile: Dockerfile
-  - image: frontend
-    context: src/frontend
-  - image: adservice
-    context: src/adservice
+    custom:
+      buildCommand: "./build.sh"
+      dependencies:
+        paths:
+          - Dockerfile
+          - src/emailservice
+  # - image: productcatalogservice
+  #   context: src/productcatalogservice
+  # - image: recommendationservice
+  #   context: src/recommendationservice
+  # - image: shoppingassistantservice
+  #   context: src/shoppingassistantservice
+  # - image: shippingservice
+  #   context: src/shippingservice
+  # - image: checkoutservice
+  #   context: src/checkoutservice
+  # - image: paymentservice
+  #   context: src/paymentservice
+  # - image: currencyservice
+  #   context: src/currencyservice
+  # - image: cartservice
+  #   context: src/cartservice/src
+  #   docker:
+  #     dockerfile: Dockerfile
+  # - image: frontend
+  #   context: src/frontend
+  # - image: adservice
+  #   context: src/adservice
   tagPolicy:
     gitCommit: {}
   local:
-    useDockerCLI: true
-    useBuildkit: true
+    push: true
 manifests:
   kustomize:
     paths:
