@@ -32,3 +32,44 @@ components:
 # - components/container-images-tag
 # - components/container-images-tag-suffix
 # - components/container-images-registry
+
+images:
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/adservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/cartservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/cartservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/checkoutservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/checkoutservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/currencyservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/currencyservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/emailservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/emailservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/frontend
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/loadgenerator
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/loadgenerator
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/paymentservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/paymentservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/productcatalogservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/recommendationservice
+    newTag: latest
+  - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/shippingservice
+    newName: main.repository.ext.icrc.org/damienh/microservices-demo/shippingservice
+    newTag: latest
+  - name: busybox:latest
+    newName: main.repository.ext.icrc.org/busybox:latest
+    newTag: latest
+  - name: redis:alpine
+    newName: main.repository.ext.icrc.org/redis:alpine
+    newTag: latest
