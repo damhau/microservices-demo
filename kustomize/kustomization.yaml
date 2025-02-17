@@ -33,6 +33,8 @@ components:
 # - components/container-images-tag-suffix
 # - components/container-images-registry
 
+namespace: microservices-demo
+
 images:
   - name: us-central1-docker.pkg.dev/google-samples/microservices-demo/adservice
     newName: main.repository.ext.icrc.org/damienh/microservices-demo/adservice
